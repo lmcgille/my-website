@@ -46,14 +46,6 @@
             parks.forEach(park => {
                 const marker = L.marker([park.lat, park.lng]).addTo(map);
                 marker.bindPopup(`<b>${park.name}</b><br><a href="${park.file}">Explore Park</a>`);
-
-                // Also add direct click navigation for a similar feel to the previous version
-                marker.on('click', function() {
-                    // Using a small timeout to allow the popup to open if needed,
-                    // or just navigate immediately.
-                    // window.location.href = park.file;
-                });
-
                 markers.push(marker);
             });
 

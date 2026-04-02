@@ -221,3 +221,35 @@ nav.solid {
         height: 400px;
     }
 }
+
+/* Fun Facts Section */
+.fun-facts {
+    background-color: #e8f8f0;
+    padding: 25px;
+    border-left: 5px solid #2ecc71;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+.fun-facts h3 {
+    margin-bottom: 15px;
+    color: #27ae60;
+}
+
+.fun-facts ul {
+    list-style: none;
+}
+
+.fun-facts li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.fun-facts li::before {
+    content: "•";
+    color: #2ecc71;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
