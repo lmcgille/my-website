@@ -4,124 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banff National Park - NatureExplorer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        nav {
-            background-color: #2c3e50;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #fff;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #2ecc71;
-        }
-
-        .hero {
-            height: 60vh;
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-        .content h2 {
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-
-        .content p {
-            margin-bottom: 20px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #2ecc71;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 20px;
-            }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
+    <nav class="solid">
         <a href="index.html" class="logo">NatureExplorer</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="parks.html">Explore Parks</a></li>
         </ul>
     </nav>
-    <div class="hero">
+    <div class="hero sub-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');">
         <h1>Banff</h1>
     </div>
     <div class="content">
         <h2>Canada's First National Park</h2>
-        <p>Banff National Park is Canada's oldest national park, established in 1885. Located in the Alberta Rockies, it encompasses 6,641 square kilometres of mountainous terrain, with many glaciers and ice fields, dense coniferous forest, and alpine landscapes.</p>
-        <p>Banff is renowned for its turquoise glacial lakes, including Lake Louise and Moraine Lake, set against a backdrop of rugged peaks. The park offers world-class hiking, skiing, and hot springs, making it a premier destination for outdoor enthusiasts year-round.</p>
+        <p>Banff National Park is Canada's oldest national park, established in 1885. Located in the Rocky Mountains, 110–180 kilometres west of Calgary, Banff encompasses 6,641 square kilometres of mountainous terrain, with numerous glaciers and ice fields, dense coniferous forest, and alpine landscapes.</p>
+        <p>The Icefields Parkway extends from Lake Louise, connecting to Jasper National Park in the north. Provincial forests and Yoho National Park are neighbours to the west, while Kootenay National Park is located to the south and Kananaskis Country to the southeast.</p>
         <a href="parks.html" class="back-link">&larr; Back to All Parks</a>
     </div>
 </body>
