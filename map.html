@@ -24,18 +24,16 @@
         <div class="hero-inner">
             <p class="hero-eyebrow">ParkExplorer collection</p>
             <h1>Interactive Park Map</h1>
-            <p class="hero-tagline">Find each destination and open its guide</p>
+            <p class="hero-tagline">Six destinations across North America</p>
         </div>
     </header>
     <main class="park-main">
-        <div class="content park-detail explore-board">
-            <p class="explore-intro">
-                Markers show where our featured parks sit across North America. Click a pin to open a quick link, or zoom the map to plan a route between them.
+        <div class="content park-detail map-board">
+            <p class="map-intro">
+                Pan and zoom to explore each marker, then open a park guide for trails, highlights, and trip ideas. The map fits to show all six parks automatically.
             </p>
-            <h2 class="explore-board-heading">Explore by location</h2>
-            <div class="map-wrap">
-                <div id="map" role="application" aria-label="Map of featured national parks"></div>
-            </div>
+            <h2 class="map-board-heading">Explore by location</h2>
+            <div id="map" role="region" aria-label="Map of featured national parks"></div>
         </div>
     </main>
 
@@ -60,9 +58,9 @@
 
             const markers = [];
 
-            parks.forEach(function(park) {
+            parks.forEach(park => {
                 const marker = L.marker([park.lat, park.lng]).addTo(map);
-                marker.bindPopup("<b>" + park.name + "</b><br><a href=\"" + park.file + "\">Explore Park</a>");
+                marker.bindPopup(`<b>${park.name}</b><br><a href="${park.file}">Explore Park</a>`);
                 markers.push(marker);
             });
 

@@ -211,12 +211,12 @@ nav.solid {
     }
 }
 
-/* Map specific styles */
+/* Map (fallback when not on themed map page) */
 #map {
     height: 600px;
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin: 2rem 0 3rem 0;
 }
 
@@ -505,8 +505,7 @@ body.park-page .back-link:hover {
 }
 
 /* --- Explore Parks directory (aligned with park detail pages) --- */
-body.park-page.explore-parks .content.park-detail.explore-board,
-body.park-page.map-page .content.park-detail.explore-board {
+body.park-page.explore-parks .content.park-detail.explore-board {
     max-width: 72rem;
     padding-bottom: clamp(2rem, 4vw, 3.5rem);
 }
@@ -644,24 +643,28 @@ body.park-page.explore-parks .explore-grid .park-info .btn:hover {
 }
 
 @media (max-width: 768px) {
-    body.park-page.explore-parks .content.park-detail.explore-board,
-    body.park-page.map-page .content.park-detail.explore-board {
+    body.park-page.explore-parks .content.park-detail.explore-board {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
 }
 
 /* --- Park Map page (matches Explore Parks shell) --- */
-body.park-page.map-page .explore-intro {
+body.park-page.map-page .content.park-detail.map-board {
+    max-width: 72rem;
+    padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+body.park-page.map-page .map-intro {
     text-align: center;
     max-width: 42rem;
-    margin: 0 auto 2rem;
+    margin: 0 auto 2.5rem;
     font-size: 1.08rem;
     line-height: 1.75;
     color: #3d4740;
 }
 
-body.park-page.map-page .explore-board-heading {
+body.park-page.map-page .map-board-heading {
     font-family: 'Fraunces', Georgia, serif;
     font-size: clamp(1.35rem, 2.5vw, 1.6rem);
     font-weight: 600;
@@ -670,39 +673,66 @@ body.park-page.map-page .explore-board-heading {
     margin-bottom: 1.5rem;
 }
 
-body.park-page.map-page .map-wrap {
-    position: relative;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid rgba(45, 58, 50, 0.1);
-    box-shadow:
-        0 4px 0 var(--park-accent-soft),
-        0 20px 48px var(--park-glow);
-}
-
-body.park-page.map-page .map-wrap::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, var(--park-accent), transparent);
-    opacity: 0.75;
-    pointer-events: none;
-    z-index: 500;
-}
-
 body.park-page.map-page #map {
     height: min(62vh, 640px);
+    min-height: 360px;
     width: 100%;
     margin: 0;
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 16px;
+    border: 1px solid rgba(45, 58, 50, 0.12);
+    box-shadow:
+        0 4px 0 var(--park-accent-soft),
+        0 24px 48px var(--park-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    z-index: 0;
+}
+
+body.park-page.map-page .leaflet-container {
+    font-family: 'Source Sans 3', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 16px;
+}
+
+body.park-page.map-page .leaflet-popup-content-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 8px 28px var(--park-glow);
+    border: 1px solid rgba(45, 58, 50, 0.1);
+}
+
+body.park-page.map-page .leaflet-popup-content {
+    margin: 0.85rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2d3a32;
+}
+
+body.park-page.map-page .leaflet-popup-content b {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.1rem;
+    color: var(--park-accent-deep);
+}
+
+body.park-page.map-page .leaflet-popup-content a {
+    color: var(--park-accent-deep);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--park-accent);
+    padding-bottom: 1px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+body.park-page.map-page .leaflet-popup-content a:hover {
+    color: var(--park-accent);
+    border-bottom-color: var(--park-accent-soft);
 }
 
 @media (max-width: 768px) {
+    body.park-page.map-page .content.park-detail.map-board {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
     body.park-page.map-page #map {
-        height: min(52vh, 420px);
+        height: 55vh;
+        min-height: 280px;
     }
 }
