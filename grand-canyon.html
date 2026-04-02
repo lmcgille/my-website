@@ -6,36 +6,46 @@
     <title>Grand Canyon National Park - NatureExplorer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="park-page park-grand-canyon">
     <nav class="solid">
         <a href="index.html" class="logo">NatureExplorer</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="parks.html">Explore Parks</a></li><li><a href="map.html">Park Map</a></li>
+            <li><a href="parks.html">Explore Parks</a></li>
+            <li><a href="map.html">Park Map</a></li>
         </ul>
     </nav>
-    <div class="hero sub-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?auto=format&fit=crop&w=1920&q=80');">
-        <h1>Grand Canyon</h1>
-    </div>
-    <div class="content">
-        <h2>A Natural Wonder of the World</h2>
-        <p>Grand Canyon National Park, in Arizona, is home to much of the immense Grand Canyon, with its layered bands of red rock revealing millions of years of geological history. Viewpoints include Mather Point, Yavapai Observation Station and Mary Colter’s Desert View Watchtower.</p>
-
-        <p>The journey from the rim down to the <strong>Colorado River</strong> involves a descent of nearly 5,000 feet. Hikers experience multiple climate zones as they go deeper into the canyon, starting from high-altitude ponderosa forests and ending in hot desert landscapes at the bottom.</p>
-
-        <div class="fun-facts">
-            <h3>Fun Facts</h3>
-            <ul>
-                <li>The village of Supai is located at the bottom of the canyon and is the only place in the U.S. where mail is still delivered by mules.</li>
-                <li>The Grand Canyon is wider than the entire state of Rhode Island.</li>
-                <li>There are over 1,000 caves within the canyon, but only one is open to the public.</li>
-                <li>The air in the Grand Canyon is among the cleanest in the United States.</li>
-            </ul>
+    <header
+        class="hero sub-page park-hero"
+        style="--park-hero-image: url('https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?auto=format&fit=crop&w=1920&q=80');"
+    >
+        <div class="hero-inner">
+            <p class="hero-eyebrow">Northern Arizona · Est. 1919</p>
+            <h1>Grand Canyon</h1>
+            <p class="hero-tagline">National Park</p>
         </div>
+    </header>
+    <main class="park-main">
+        <div class="content park-detail">
+            <h2>A Natural Wonder of the World</h2>
+            <p>Grand Canyon National Park, in Arizona, is home to much of the immense Grand Canyon, with its layered bands of red rock revealing millions of years of geological history. Viewpoints include Mather Point, Yavapai Observation Station and Mary Colter’s Desert View Watchtower.</p>
 
-        <p>Lipan Point, with wide views of the canyon and Colorado River, is a popular sunrise and sunset spot. The canyon is one of the most studied landscapes in the world, with its combination of size, depth, and exposed layers of colorful rocks.</p>
+            <p>The journey from the rim down to the <strong>Colorado River</strong> involves a descent of nearly 5,000 feet. Hikers experience multiple climate zones as they go deeper into the canyon, starting from high-altitude ponderosa forests and ending in hot desert landscapes at the bottom.</p>
 
-        <a href="parks.html" class="back-link">&larr; Back to All Parks</a>
-    </div>
+            <div class="fun-facts">
+                <h3>Fun Facts</h3>
+                <ul>
+                    <li>The village of Supai is located at the bottom of the canyon and is the only place in the U.S. where mail is still delivered by mules.</li>
+                    <li>The Grand Canyon is wider than the entire state of Rhode Island.</li>
+                    <li>There are over 1,000 caves within the canyon, but only one is open to the public.</li>
+                    <li>The air in the Grand Canyon is among the cleanest in the United States.</li>
+                </ul>
+            </div>
+
+            <p>Lipan Point, with wide views of the canyon and Colorado River, is a popular sunrise and sunset spot. The canyon is one of the most studied landscapes in the world, with its combination of size, depth, and exposed layers of colorful rocks.</p>
+
+            <a href="parks.html" class="back-link">&larr; Back to All Parks</a>
+        </div>
+    </main>
 </body>
 </html>

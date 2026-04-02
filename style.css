@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap');
+
 /* Global Styles */
 * {
     margin: 0;
@@ -252,4 +254,250 @@ nav.solid {
     font-weight: bold;
     position: absolute;
     left: 0;
+}
+
+/* --- Individual park pages (nature-themed) --- */
+body.park-page {
+    font-family: 'Source Sans 3', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(165deg, #eef4ec 0%, #f5f0e6 45%, #e8efe8 100%);
+    color: #2d3a32;
+    min-height: 100vh;
+    --park-accent: #3d6b4f;
+    --park-accent-deep: #2a4a36;
+    --park-accent-soft: rgba(61, 107, 79, 0.14);
+    --park-glow: rgba(61, 107, 79, 0.08);
+}
+
+body.park-page.park-yellowstone {
+    --park-accent: #b8892a;
+    --park-accent-deep: #7a5c16;
+    --park-accent-soft: rgba(184, 137, 42, 0.16);
+    --park-glow: rgba(184, 137, 42, 0.12);
+}
+
+body.park-page.park-yosemite {
+    --park-accent: #4a6b52;
+    --park-accent-deep: #2f4536;
+    --park-accent-soft: rgba(74, 107, 82, 0.16);
+    --park-glow: rgba(74, 107, 82, 0.1);
+}
+
+body.park-page.park-banff {
+    --park-accent: #2a6f7c;
+    --park-accent-deep: #1a4a52;
+    --park-accent-soft: rgba(42, 111, 124, 0.15);
+    --park-glow: rgba(42, 111, 124, 0.1);
+}
+
+body.park-page.park-zion {
+    --park-accent: #b55c3b;
+    --park-accent-deep: #7a3d26;
+    --park-accent-soft: rgba(181, 92, 59, 0.16);
+    --park-glow: rgba(181, 92, 59, 0.12);
+}
+
+body.park-page.park-grand-canyon {
+    --park-accent: #a85c3c;
+    --park-accent-deep: #6b3823;
+    --park-accent-soft: rgba(168, 92, 60, 0.16);
+    --park-glow: rgba(168, 92, 60, 0.1);
+}
+
+body.park-page.park-acadia {
+    --park-accent: #2d5a66;
+    --park-accent-deep: #1c3a42;
+    --park-accent-soft: rgba(45, 90, 102, 0.15);
+    --park-glow: rgba(45, 90, 102, 0.1);
+}
+
+body.park-page nav.solid {
+    background: linear-gradient(90deg, var(--park-accent-deep), #243329);
+    box-shadow: 0 4px 20px var(--park-glow);
+}
+
+body.park-page .hero.park-hero {
+    height: 62vh;
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+    background-image:
+        linear-gradient(
+            165deg,
+            rgba(20, 35, 28, 0.25) 0%,
+            rgba(20, 35, 28, 0.5) 55%,
+            rgba(20, 35, 28, 0.75) 100%
+        ),
+        var(--park-hero-image);
+    border-bottom: 4px solid var(--park-accent);
+    box-shadow: inset 0 -40px 80px var(--park-glow);
+}
+
+body.park-page .hero.park-hero .hero-inner {
+    max-width: 52rem;
+    padding: 1.5rem 1.75rem 2rem;
+    text-align: center;
+}
+
+body.park-page .hero.park-hero .hero-eyebrow {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 0.85rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+body.park-page .hero.park-hero .hero-tagline {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.92);
+    margin-top: 0.6rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+body.park-page .hero.park-hero h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(2.6rem, 7vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+body.park-page .hero.park-hero h1::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 3px;
+    margin: 1.1rem auto 0;
+    border-radius: 3px;
+    background: linear-gradient(90deg, transparent, var(--park-accent), transparent);
+    opacity: 0.95;
+}
+
+body.park-page .park-main {
+    padding: 0 1.25rem 3.5rem;
+}
+
+body.park-page .content.park-detail {
+    max-width: 52rem;
+    margin: -3.25rem auto 0;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(180deg, #fefdf8 0%, #f6f7f2 100%);
+    padding: clamp(1.75rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3.25rem) clamp(2rem, 4vw, 3.25rem);
+    border-radius: 20px;
+    box-shadow:
+        0 4px 0 var(--park-accent-soft),
+        0 24px 48px var(--park-glow),
+        0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    border: 1px solid rgba(45, 58, 50, 0.08);
+}
+
+body.park-page .content.park-detail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 4px;
+    border-radius: 0 0 6px 6px;
+    background: linear-gradient(90deg, transparent, var(--park-accent), transparent);
+    opacity: 0.55;
+}
+
+body.park-page .content.park-detail h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.5rem, 3.5vw, 1.85rem);
+    font-weight: 600;
+    color: var(--park-accent-deep);
+    margin-bottom: 1.15rem;
+    line-height: 1.25;
+}
+
+body.park-page .content.park-detail p {
+    font-size: 1.06rem;
+    line-height: 1.75;
+    color: #3d4740;
+}
+
+body.park-page .content.park-detail p strong {
+    color: var(--park-accent-deep);
+    font-weight: 600;
+}
+
+body.park-page .fun-facts {
+    background:
+        radial-gradient(ellipse 120% 80% at 100% 0%, var(--park-accent-soft), transparent 55%),
+        linear-gradient(145deg, #f3f7f0, #eef3ea);
+    border: 1px solid rgba(45, 58, 50, 0.1);
+    border-left: 4px solid var(--park-accent);
+    border-radius: 14px;
+    padding: 1.6rem 1.6rem 1.35rem;
+    margin: 2rem 0;
+    box-shadow: 0 8px 28px var(--park-glow);
+}
+
+body.park-page .fun-facts h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--park-accent-deep);
+    margin-bottom: 1rem;
+}
+
+body.park-page .fun-facts h3::before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50% 0 50% 50%;
+    background: var(--park-accent);
+    vertical-align: middle;
+    transform: rotate(-45deg);
+    opacity: 0.85;
+}
+
+body.park-page .fun-facts li::before {
+    color: var(--park-accent);
+}
+
+body.park-page .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 2.25rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 999px;
+    border: 2px solid var(--park-accent);
+    color: var(--park-accent-deep);
+    background: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+body.park-page .back-link:hover {
+    background: var(--park-accent);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 6px 20px var(--park-accent-soft);
+}
+
+@media (max-width: 768px) {
+    body.park-page .hero.park-hero {
+        height: 50vh;
+        min-height: 280px;
+    }
+
+    body.park-page .content.park-detail {
+        margin-top: -2rem;
+        border-radius: 16px;
+    }
 }

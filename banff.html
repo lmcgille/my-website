@@ -6,36 +6,46 @@
     <title>Banff National Park - NatureExplorer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="park-page park-banff">
     <nav class="solid">
         <a href="index.html" class="logo">NatureExplorer</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="parks.html">Explore Parks</a></li><li><a href="map.html">Park Map</a></li>
+            <li><a href="parks.html">Explore Parks</a></li>
+            <li><a href="map.html">Park Map</a></li>
         </ul>
     </nav>
-    <div class="hero sub-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');">
-        <h1>Banff</h1>
-    </div>
-    <div class="content">
-        <h2>Canada's First National Park</h2>
-        <p>Banff National Park is Canada's oldest national park, established in 1885. Located in the Rocky Mountains, 110–180 kilometres west of Calgary, Banff encompasses 6,641 square kilometres of mountainous terrain, with numerous glaciers and ice fields, dense coniferous forest, and alpine landscapes.</p>
-
-        <p>The park is famous for its stunning turquoise-colored lakes, such as <strong>Lake Louise</strong> and <strong>Moraine Lake</strong>. This vibrant blue-green color is caused by "rock flour"—fine particles of silt suspended in the glacial meltwater that reflect blue and green wavelengths of light.</p>
-
-        <div class="fun-facts">
-            <h3>Fun Facts</h3>
-            <ul>
-                <li>The park was founded after three railway workers discovered a cave with natural hot springs.</li>
-                <li>Banff is home to seven of Canada's most famous peaks over 3,000 meters.</li>
-                <li>The Icefields Parkway is often cited as one of the most beautiful scenic drives in the world.</li>
-                <li>Wildlife overpasses were built over the Trans-Canada Highway to protect large animals like grizzlies.</li>
-            </ul>
+    <header
+        class="hero sub-page park-hero"
+        style="--park-hero-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');"
+    >
+        <div class="hero-inner">
+            <p class="hero-eyebrow">Alberta Rockies · Est. 1885</p>
+            <h1>Banff</h1>
+            <p class="hero-tagline">National Park</p>
         </div>
+    </header>
+    <main class="park-main">
+        <div class="content park-detail">
+            <h2>Canada's First National Park</h2>
+            <p>Banff National Park is Canada's oldest national park, established in 1885. Located in the Rocky Mountains, 110–180 kilometres west of Calgary, Banff encompasses 6,641 square kilometres of mountainous terrain, with numerous glaciers and ice fields, dense coniferous forest, and alpine landscapes.</p>
 
-        <p>The Icefields Parkway extends from Lake Louise, connecting to Jasper National Park in the north. Provincial forests and Yoho National Park are neighbours to the west, while Kootenay National Park is located to the south and Kananaskis Country to the southeast.</p>
+            <p>The park is famous for its stunning turquoise-colored lakes, such as <strong>Lake Louise</strong> and <strong>Moraine Lake</strong>. This vibrant blue-green color is caused by "rock flour"—fine particles of silt suspended in the glacial meltwater that reflect blue and green wavelengths of light.</p>
 
-        <a href="parks.html" class="back-link">&larr; Back to All Parks</a>
-    </div>
+            <div class="fun-facts">
+                <h3>Fun Facts</h3>
+                <ul>
+                    <li>The park was founded after three railway workers discovered a cave with natural hot springs.</li>
+                    <li>Banff is home to seven of Canada's most famous peaks over 3,000 meters.</li>
+                    <li>The Icefields Parkway is often cited as one of the most beautiful scenic drives in the world.</li>
+                    <li>Wildlife overpasses were built over the Trans-Canada Highway to protect large animals like grizzlies.</li>
+                </ul>
+            </div>
+
+            <p>The Icefields Parkway extends from Lake Louise, connecting to Jasper National Park in the north. Provincial forests and Yoho National Park are neighbours to the west, while Kootenay National Park is located to the south and Kananaskis Country to the southeast.</p>
+
+            <a href="parks.html" class="back-link">&larr; Back to All Parks</a>
+        </div>
+    </main>
 </body>
 </html>

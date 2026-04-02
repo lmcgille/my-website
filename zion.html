@@ -6,36 +6,46 @@
     <title>Zion National Park - NatureExplorer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="park-page park-zion">
     <nav class="solid">
         <a href="index.html" class="logo">NatureExplorer</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="parks.html">Explore Parks</a></li><li><a href="map.html">Park Map</a></li>
+            <li><a href="parks.html">Explore Parks</a></li>
+            <li><a href="map.html">Park Map</a></li>
         </ul>
     </nav>
-    <div class="hero sub-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1508611181434-6338b5569420?auto=format&fit=crop&w=1920&q=80');">
-        <h1>Zion</h1>
-    </div>
-    <div class="content">
-        <h2>Follow the Paths of the Ancients</h2>
-        <p>Zion National Park is a southwest Utah nature preserve distinguished by Zion Canyon’s steep red cliffs. Zion Canyon Scenic Drive cuts through its main section, leading to forest trails along the Virgin River. The river flows to the Emerald Pools, which have waterfalls and a hanging garden.</p>
-
-        <p>The park's most famous and exhilarating trail is <strong>Angels Landing</strong>. This narrow ridge towers over the canyon floor, offering 360-degree views of the red sandstone cliffs. The trail is renowned for its steep climb and long drop-offs, attracting adventurous hikers from all over the world.</p>
-
-        <div class="fun-facts">
-            <h3>Fun Facts</h3>
-            <ul>
-                <li>The name "Zion" was given to the area by Mormon settlers in the 1860s.</li>
-                <li>The park was originally named Mukuntuweap National Monument in 1909.</li>
-                <li>The Virgin River, which carved the canyon, drops an average of 71 feet per mile.</li>
-                <li>Zion is home to the Mexican Spotted Owl, a threatened species that lives in the narrow canyons.</li>
-            </ul>
+    <header
+        class="hero sub-page park-hero"
+        style="--park-hero-image: url('https://images.unsplash.com/photo-1508611181434-6338b5569420?auto=format&fit=crop&w=1920&q=80');"
+    >
+        <div class="hero-inner">
+            <p class="hero-eyebrow">Southwest Utah · Est. 1919</p>
+            <h1>Zion</h1>
+            <p class="hero-tagline">National Park</p>
         </div>
+    </header>
+    <main class="park-main">
+        <div class="content park-detail">
+            <h2>Follow the Paths of the Ancients</h2>
+            <p>Zion National Park is a southwest Utah nature preserve distinguished by Zion Canyon’s steep red cliffs. Zion Canyon Scenic Drive cuts through its main section, leading to forest trails along the Virgin River. The river flows to the Emerald Pools, which have waterfalls and a hanging garden.</p>
 
-        <p>Also along the river, partly through deep chasms, is the Zion Narrows wading hike. The park's unique geography and variety of life zones allow for unusual plant and animal diversity. The park is home to 289 species of birds, 75 mammals, and 32 reptiles.</p>
+            <p>The park's most famous and exhilarating trail is <strong>Angels Landing</strong>. This narrow ridge towers over the canyon floor, offering 360-degree views of the red sandstone cliffs. The trail is renowned for its steep climb and long drop-offs, attracting adventurous hikers from all over the world.</p>
 
-        <a href="parks.html" class="back-link">&larr; Back to All Parks</a>
-    </div>
+            <div class="fun-facts">
+                <h3>Fun Facts</h3>
+                <ul>
+                    <li>The name "Zion" was given to the area by Mormon settlers in the 1860s.</li>
+                    <li>The park was originally named Mukuntuweap National Monument in 1909.</li>
+                    <li>The Virgin River, which carved the canyon, drops an average of 71 feet per mile.</li>
+                    <li>Zion is home to the Mexican Spotted Owl, a threatened species that lives in the narrow canyons.</li>
+                </ul>
+            </div>
+
+            <p>Also along the river, partly through deep chasms, is the Zion Narrows wading hike. The park's unique geography and variety of life zones allow for unusual plant and animal diversity. The park is home to 289 species of birds, 75 mammals, and 32 reptiles.</p>
+
+            <a href="parks.html" class="back-link">&larr; Back to All Parks</a>
+        </div>
+    </main>
 </body>
 </html>
