@@ -8,7 +8,7 @@
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
-<body>
+<body class="park-page map-page">
     <nav class="solid">
         <a href="index.html" class="logo">ParkExplorer</a>
         <ul class="nav-links">
@@ -17,20 +17,37 @@
             <li><a href="map.html">Park Map</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <h1 style="text-align: center; color: #2c3e50; font-size: 2.5rem; margin-bottom: 2rem;">Interactive Park Map</h1>
-        <div id="map"></div>
-    </div>
+    <header
+        class="hero sub-page park-hero"
+        style="--park-hero-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1920&q=80');"
+    >
+        <div class="hero-inner">
+            <p class="hero-eyebrow">ParkExplorer collection</p>
+            <h1>Interactive Park Map</h1>
+            <p class="hero-tagline">Find each destination and open its guide</p>
+        </div>
+    </header>
+    <main class="park-main">
+        <div class="content park-detail explore-board">
+            <p class="explore-intro">
+                Markers show where our featured parks sit across North America. Click a pin to open a quick link, or zoom the map to plan a route between them.
+            </p>
+            <h2 class="explore-board-heading">Explore by location</h2>
+            <div class="map-wrap">
+                <div id="map" role="application" aria-label="Map of featured national parks"></div>
+            </div>
+        </div>
+    </main>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const map = L.map('map').setView([39.8283, -98.5795], 4); // Center of USA
+            const map = L.map('map').setView([39.8283, -98.5795], 4);
 
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-        }).addTo(map);
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+            }).addTo(map);
 
             const parks = [
                 { name: "Yellowstone", lat: 44.4280, lng: -110.5885, file: "yellowstone.html" },
@@ -43,9 +60,9 @@
 
             const markers = [];
 
-            parks.forEach(park => {
+            parks.forEach(function(park) {
                 const marker = L.marker([park.lat, park.lng]).addTo(map);
-                marker.bindPopup(`<b>${park.name}</b><br><a href="${park.file}">Explore Park</a>`);
+                marker.bindPopup("<b>" + park.name + "</b><br><a href=\"" + park.file + "\">Explore Park</a>");
                 markers.push(marker);
             });
 

@@ -505,7 +505,8 @@ body.park-page .back-link:hover {
 }
 
 /* --- Explore Parks directory (aligned with park detail pages) --- */
-body.park-page.explore-parks .content.park-detail.explore-board {
+body.park-page.explore-parks .content.park-detail.explore-board,
+body.park-page.map-page .content.park-detail.explore-board {
     max-width: 72rem;
     padding-bottom: clamp(2rem, 4vw, 3.5rem);
 }
@@ -643,8 +644,65 @@ body.park-page.explore-parks .explore-grid .park-info .btn:hover {
 }
 
 @media (max-width: 768px) {
-    body.park-page.explore-parks .content.park-detail.explore-board {
+    body.park-page.explore-parks .content.park-detail.explore-board,
+    body.park-page.map-page .content.park-detail.explore-board {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
+    }
+}
+
+/* --- Park Map page (matches Explore Parks shell) --- */
+body.park-page.map-page .explore-intro {
+    text-align: center;
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: #3d4740;
+}
+
+body.park-page.map-page .explore-board-heading {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(1.35rem, 2.5vw, 1.6rem);
+    font-weight: 600;
+    color: var(--park-accent-deep);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+body.park-page.map-page .map-wrap {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(45, 58, 50, 0.1);
+    box-shadow:
+        0 4px 0 var(--park-accent-soft),
+        0 20px 48px var(--park-glow);
+}
+
+body.park-page.map-page .map-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--park-accent), transparent);
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: 500;
+}
+
+body.park-page.map-page #map {
+    height: min(62vh, 640px);
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    body.park-page.map-page #map {
+        height: min(52vh, 420px);
     }
 }
