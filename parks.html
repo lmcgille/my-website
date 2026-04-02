@@ -3,70 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Nature Parks - NatureExplorer</title>
+    <title>Explore Parks — ParkExplorer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="park-page explore-parks">
     <nav class="solid">
-        <a href="index.html" class="logo">NatureExplorer</a>
+        <a href="index.html" class="logo">ParkExplorer</a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="parks.html">Explore Parks</a></li>
             <li><a href="map.html">Park Map</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <h1 style="text-align: center; color: #2c3e50; font-size: 2.5rem;">Discover National Parks</h1>
-        <div class="parks-grid">
-            <div class="park-card">
+    <header
+        class="hero sub-page park-hero"
+        style="--park-hero-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1920&q=80');"
+    >
+        <div class="hero-inner">
+            <p class="hero-eyebrow">ParkExplorer collection</p>
+            <h1>Discover National Parks</h1>
+            <p class="hero-tagline">Six iconic landscapes worth the journey</p>
+        </div>
+    </header>
+    <main class="park-main">
+        <div class="content park-detail explore-board">
+            <p class="explore-intro">
+                From geothermal valleys and glacier-fed lakes to red-rock canyons and Atlantic granite shores—open a guide for trails, history, and the details that make each park unforgettable.
+            </p>
+            <h2 class="explore-board-heading">Choose your destination</h2>
+            <div class="parks-grid explore-grid">
+            <article class="park-card" data-park="yellowstone">
                 <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1531333169123-283285c68acc?auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="park-info">
                     <h2>Yellowstone</h2>
                     <p>Experience the world's first national park, famous for its geothermal features and diverse wildlife.</p>
                     <a href="yellowstone.html" class="btn">Explore Yellowstone</a>
                 </div>
-            </div>
-            <div class="park-card">
+            </article>
+            <article class="park-card" data-park="yosemite">
                 <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="park-info">
                     <h2>Yosemite</h2>
                     <p>Marvel at iconic granite cliffs, towering waterfalls, and ancient giant sequoias in California's Sierra Nevada.</p>
                     <a href="yosemite.html" class="btn">Explore Yosemite</a>
                 </div>
-            </div>
-            <div class="park-card">
+            </article>
+            <article class="park-card" data-park="banff">
                 <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="park-info">
                     <h2>Banff</h2>
                     <p>Discover the stunning turquoise lakes and snow-capped peaks of the Canadian Rockies.</p>
                     <a href="banff.html" class="btn">Explore Banff</a>
                 </div>
-            </div>
-            <div class="park-card">
+            </article>
+            <article class="park-card" data-park="zion">
                 <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1508611181434-6338b5569420?auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="park-info">
                     <h2>Zion</h2>
-                    <p>Hike through the majestic Navajo Sandstone cliffs and red rock canyons in Utah.</p>
+                    <p>Hike through majestic Navajo sandstone cliffs and red rock canyons in Utah.</p>
                     <a href="zion.html" class="btn">Explore Zion</a>
                 </div>
-            </div>
-            <div class="park-card">
+            </article>
+            <article class="park-card" data-park="grand-canyon">
                 <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="park-info">
                     <h2>Grand Canyon</h2>
-                    <p>Marvel at the immense, layered bands of red rock in this world-famous geological wonder.</p>
+                    <p>Marvel at immense, layered bands of red rock in this world-famous geological wonder.</p>
                     <a href="grand-canyon.html" class="btn">Explore Grand Canyon</a>
                 </div>
-            </div>
-            <div class="park-card">
+            </article>
+            <article class="park-card" data-park="acadia">
                 <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1549402505-896881729056?auto=format&fit=crop&w=800&q=80');"></div>
                 <div class="park-info">
                     <h2>Acadia</h2>
                     <p>Experience the rocky Atlantic coast and glacier-scoured granite peaks of Maine.</p>
                     <a href="acadia.html" class="btn">Explore Acadia</a>
                 </div>
+            </article>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
