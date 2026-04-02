@@ -593,6 +593,15 @@ body.park-page.explore-parks .park-card[data-park="acadia"] {
 body.park-page.explore-parks .explore-grid .park-image {
     height: 220px;
     position: relative;
+    background-color: #e5eae4;
+}
+
+body.park-page.explore-parks .explore-grid .park-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 body.park-page.explore-parks .explore-grid .park-image::after {
@@ -603,6 +612,8 @@ body.park-page.explore-parks .explore-grid .park-image::after {
     bottom: 0;
     height: 4px;
     background: linear-gradient(90deg, transparent, var(--card-accent), transparent);
+    z-index: 1;
+    pointer-events: none;
 }
 
 body.park-page.explore-parks .explore-grid .park-info h2 {
