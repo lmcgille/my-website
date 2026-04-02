@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Park Map - NatureExplorer</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 <body>
     <nav class="solid">
@@ -19,19 +21,16 @@
         <h1 style="text-align: center; color: #2c3e50; font-size: 2.5rem; margin-bottom: 2rem;">Interactive Park Map</h1>
         <div id="map"></div>
     </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
-        function initMap() {
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 4,
-                center: { lat: 39.8283, lng: -98.5795 }, // Center of USA
-                styles: [
-                    {
-                        "featureType": "poi.park",
-                        "elementType": "geometry.fill",
-                        "stylers": [{ "color": "#c5e1a5" }]
-                    }
-                ]
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = L.map('map').setView([39.8283, -98.5795], 4); // Center of USA
+
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+        }).addTo(map);
 
             const parks = [
                 { name: "Yellowstone", lat: 44.4280, lng: -110.5885, file: "yellowstone.html" },
@@ -42,28 +41,25 @@
                 { name: "Acadia", lat: 44.3386, lng: -68.2733, file: "acadia.html" }
             ];
 
-            const bounds = new google.maps.LatLngBounds();
+            const markers = [];
 
             parks.forEach(park => {
-                const marker = new google.maps.Marker({
-                    position: { lat: park.lat, lng: park.lng },
-                    map: map,
-                    title: park.name,
-                    icon: {
-                        url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-                    }
+                const marker = L.marker([park.lat, park.lng]).addTo(map);
+                marker.bindPopup(`<b>${park.name}</b><br><a href="${park.file}">Explore Park</a>`);
+
+                // Also add direct click navigation for a similar feel to the previous version
+                marker.on('click', function() {
+                    // Using a small timeout to allow the popup to open if needed,
+                    // or just navigate immediately.
+                    // window.location.href = park.file;
                 });
 
-                marker.addListener("click", () => {
-                    window.location.href = park.file;
-                });
-
-                bounds.extend(marker.getPosition());
+                markers.push(marker);
             });
 
-            map.fitBounds(bounds);
-        }
+            const group = new L.featureGroup(markers);
+            map.fitBounds(group.getBounds().pad(0.1));
+        });
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </body>
 </html>
