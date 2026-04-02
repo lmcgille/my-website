@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Nature Parks - NatureExplorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2ecc71;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        .parks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .park-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .park-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .park-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .park-info {
+            padding: 20px;
+        }
+
+        .park-info h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .park-info p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">NatureExplorer</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="parks.html">Explore Parks</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Discover National Parks</h1>
+        <div class="parks-grid">
+            <div class="park-card">
+                <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1531333169123-283285c68acc?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="park-info">
+                    <h2>Yellowstone</h2>
+                    <p>Experience the world's first national park, famous for its geothermal features and diverse wildlife.</p>
+                    <a href="yellowstone.html" class="btn">Explore Yellowstone</a>
+                </div>
+            </div>
+            <div class="park-card">
+                <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="park-info">
+                    <h2>Yosemite</h2>
+                    <p>Marvel at iconic granite cliffs, towering waterfalls, and ancient giant sequoias in California's Sierra Nevada.</p>
+                    <a href="yosemite.html" class="btn">Explore Yosemite</a>
+                </div>
+            </div>
+            <div class="park-card">
+                <div class="park-image" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="park-info">
+                    <h2>Banff</h2>
+                    <p>Discover the stunning turquoise lakes and snow-capped peaks of the Canadian Rockies.</p>
+                    <a href="banff.html" class="btn">Explore Banff</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

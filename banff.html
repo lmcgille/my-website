@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore the Beauty of Nature</title>
+    <title>Banff National Park - NatureExplorer</title>
     <style>
         * {
             margin: 0;
@@ -11,21 +11,19 @@
             box-sizing: border-box;
         }
 
-        body, html {
-            height: 100%;
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
+            line-height: 1.6;
+            color: #333;
         }
 
         nav {
-            position: absolute;
-            top: 0;
-            width: 100%;
+            background-color: #2c3e50;
             padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 10;
+            color: #fff;
         }
 
         .logo {
@@ -55,60 +53,56 @@
             color: #2ecc71;
         }
 
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80');
-            height: 100vh;
-            background-position: center;
-            background-repeat: no-repeat;
+        .hero {
+            height: 60vh;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
-            position: relative;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
+            color: #fff;
             text-align: center;
         }
 
-        .hero-content {
-            max-width: 800px;
-            padding: 20px;
-        }
-
-        h1 {
+        .hero h1 {
             font-size: 4rem;
-            margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
         }
 
-        .btn {
+        .content h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .back-link {
             display: inline-block;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            color: #fff;
-            background-color: #2ecc71;
+            margin-top: 30px;
+            color: #2ecc71;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
         }
 
-        .btn:hover {
-            background-color: #27ae60;
+        .back-link:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
             nav {
                 padding: 20px;
             }
-            h1 {
+            .hero h1 {
                 font-size: 2.5rem;
-            }
-            p {
-                font-size: 1.2rem;
             }
         }
     </style>
@@ -121,12 +115,14 @@
             <li><a href="parks.html">Explore Parks</a></li>
         </ul>
     </nav>
-    <div class="hero-section">
-        <div class="hero-content">
-            <h1>Adventure Awaits</h1>
-            <p>Discover breathtaking landscapes and reconnect with the great outdoors. Your next journey starts here.</p>
-            <a href="parks.html" class="btn">Get Started</a>
-        </div>
+    <div class="hero">
+        <h1>Banff</h1>
+    </div>
+    <div class="content">
+        <h2>Canada's First National Park</h2>
+        <p>Banff National Park is Canada's oldest national park, established in 1885. Located in the Alberta Rockies, it encompasses 6,641 square kilometres of mountainous terrain, with many glaciers and ice fields, dense coniferous forest, and alpine landscapes.</p>
+        <p>Banff is renowned for its turquoise glacial lakes, including Lake Louise and Moraine Lake, set against a backdrop of rugged peaks. The park offers world-class hiking, skiing, and hot springs, making it a premier destination for outdoor enthusiasts year-round.</p>
+        <a href="parks.html" class="back-link">&larr; Back to All Parks</a>
     </div>
 </body>
 </html>
